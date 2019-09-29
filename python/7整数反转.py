@@ -17,8 +17,11 @@ class Solution:
         result = result if x>0 else -result
 
         # 溢出判断
-        # if result > or result < 2**31
-        return result
+        if -2**31 - 1< result < 2**31 - 1:
+            return result
+        else:
+            return 0
+        
 
 x = -12365
 solver = Solution()
